@@ -1,7 +1,26 @@
 import React from 'react'
 
-export const Img = () => {
+export type ImgProps = React.DetailedHTMLProps<React.ImgHTMLAttributes<HTMLImageElement>,
+HTMLImageElement
+>& 
+Partial <{
+className:string;
+src:string;
+alt:string;
+}>
+ const Img:React.FC<React.PropsWithChildren<ImgProps>> = ({
+  className,
+  src="defaultNoData.png",
+  alt="testImg",
+  ...restProps
+ }) => {
   return (
-    <div>index</div>
+    <img className={className} src={src}
+    alt={alt}
+    {...restProps}
+    loading='lazy' 
+    />
   )
 }
+
+export {Img}
