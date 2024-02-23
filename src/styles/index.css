@@ -1,68 +1,170 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  box-sizing: border-box;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+body{
+  font-family: "Roboto", sans-serif !important;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.dhiwise-code,
+.dhiwise-navigation{
+  min-height: 100%;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.common-pointer{
   cursor: pointer;
-  transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
+.dhiwise-navigation{
+  padding: 20px;
+  background-color: #232323;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.dhiwise-navigation h1{
+  color: white;
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.dhiwise-navigation .headline{
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: white;
+}
+.dhiwise-navigation ul{
+  padding: 0;
+}
+.dhiwise-navigation ul li {
+  list-style: none;
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.dhiwise-navigation a{
+  color: #132cdc;
+}
+table{
+  border-spacing: 0;
+  width: 100%;
+}
+.common-select{
+  z-index: 10000;
+}
+.react-datepicker-popper{
+  z-index: 10000 !important;
+}
+.drawable-icon{
+  position: absolute;
+  margin: auto;
+  z-index: 1000;
+}
+.input-wrap{
+  position: relative;
+}
+option{
+  color: #000;
+}
+.table-wrap{
+  overflow: auto;
+}
+input:focus{
+  outline: none;
+}
+.ReactModal__Body--open{
+  overflow: hidden;
+}
+.slider-indicator:first-child{
+  margin-left: 0;
+}
+.slider-indicator:last-child{
+  margin-right: 0;
+}
+.rc-drawer-content-wrapper{
+  width: 100% !important;
+}
+.rc-drawer-right .rc-drawer-content-wrapper{
+  display: flex;
+  justify-content: flex-end;
+}
+.rc-drawer-left .rc-drawer-content-wrapper{
+  display: flex;
+  justify-content: flex-start;
+}
+.ReactModal__Overlay{
+  z-index: 1051;
+}
+ul li a{
+  display: block;
+}
+.mobile-menu div{
+  height: 1.5px;
+  width: 20px;
+  background-color: #000;
+  margin: 4px 0;
+}
+.mobile-menu{
+  display: none;
+  cursor: pointer;
+}
+.header-row{
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+@media only screen and (min-width:200px) and (max-width:767px){
+  .mobile-menu{
+    display: block;
   }
-  a:hover {
-    color: #747bff;
+  .header-row{
+    width: 100% !important;
   }
-  button {
-    background-color: #f9f9f9;
+  .display-block{
+    display: block;
   }
+  .display-none{
+    display: none;
+  }
+  .common-row-list > ul{
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-wrap: wrap;
+  }
+}
+.menu-close-icon{
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+.menu-overlay{
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.7;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+.close-line1{
+  transform: translate(0,6px) rotate(-45deg) skewX(0) skewY(0) scaleX(1) skewY(1);
+}
+.close-line2{
+  transform: translate(0,0) rotate(45deg) skewX(0) skewY(0) scaleX(1) skewY(1);
+}
+.common-row-list > ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  flex-grow: 1;
+}
+.common-column-list li{
+  width: 100%;
+}
+/* Scroll */
+::-webkit-scrollbar{
+  width: 4px;
+  height: 4px;
+  background: transparent;
+}
+/* Track */
+::-webkit-scrollbar-track{
+  background: transparent;
+}
+/* Handle */
+::-webkit-scrollbar-thumb{
+  background: #6b6b6b;
+  border-radius: 10px;
 }
